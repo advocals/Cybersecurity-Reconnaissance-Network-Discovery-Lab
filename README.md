@@ -58,7 +58,7 @@ This repository details the execution of two foundational cybersecurity operatio
 ### Visual Proof & Evidence
 
 #### 1. Passive Reconnaissance Terminal Execution
-![Reconnaissance Terminal Commands](Screenshot (423).png)
+![Reconnaissance Terminal Commands](Screenshot (423))
 
 #### 2. Zenmap Subnet Scan Output
 ![Zenmap Ping Scan Output](./screenshots/zenmap_scan.jpg)
