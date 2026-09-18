@@ -1,73 +1,68 @@
 # Network Reconnaissance & Subnet Discovery Operations
 
 ## Project Overview
-This repository details the execution of two foundational cybersecurity operational phases: **Passive Footprinting & Reconnaissance** using Kali Linux CLI utilities[cite: 6, 7, 8, 9, 10, 11, 12] and **Active Subnet Discovery** using Zenmap[cite: 3, 4, 5]. The objective was to collect external target telemetry[cite: 12] and map active local virtual infrastructure.
+This repository details the execution of two foundational cybersecurity operational phases: **Passive Footprinting & Reconnaissance** using Kali Linux CLI utilities and **Active Subnet Discovery** using Zenmap. The objective was to collect external target telemetry and map active local virtual infrastructure.
 
 ---
 
 ## Phase 1: Passive Reconnaissance & Target Footprinting
-* **Target Domain:** `networkwalks.com`[cite: 6, 7, 8, 9, 10, 11, 12]
-* **Platform:** Kali Linux[cite: 6, 7, 8, 9, 10, 11, 12]
+* **Target Domain:** `networkwalks.com`
+* **Platform:** Kali Linux
 
 ### Executed Commands & Discovered Telemetry
 
-* **Domain Registration Analysis (`whois`)**[cite: 10]
-  * **Command:** `whois networkwalks.com`[cite: 10]
-  * **Registrar:** GoDaddy.com, LLC[cite: 10]
-  * **Name Servers:** `NS6135.HOSTGATOR.COM`, `NS6136.HOSTGATOR.COM`[cite: 10]
+* **Domain Registration Analysis (`whois`)**
+  * **Command:** `whois networkwalks.com`
+  * **Registrar:** GoDaddy.com, LLC
+  * **Name Servers:** `NS6135.HOSTGATOR.COM`, `NS6136.HOSTGATOR.COM`
 
-* **Web Technology Profiling (`whatweb`)**[cite: 11]
-  * **Command:** `whatweb networkwalks.com`[cite: 11]
-  * **Target IP:** `192.232.216.135`[cite: 11]
-  * **Software Stack:** Apache, WordPress 7.1, Bootstrap 7.1, WordPress Download Manager 3.3.58[cite: 11]
+* **Web Technology Profiling (`whatweb`)**
+  * **Command:** `whatweb networkwalks.com`
+  * **Target IP:** `192.232.216.135`
+  * **Software Stack:** Apache, WordPress 7.1, Bootstrap 7.1, WordPress Download Manager 3.3.58
 
-* **DNS Resolution (`nslookup`)**[cite: 9]
-  * **Command:** `nslookup networkwalks.com`[cite: 9]
-  * **Resolver:** `10.36.30.44#53`[cite: 9]
-  * **Resolved Address:** `192.232.216.135`[cite: 9]
+* **DNS Resolution (`nslookup`)**
+  * **Command:** `nslookup networkwalks.com`
+  * **Resolver:** `10.36.30.44#53`
+  * **Resolved Address:** `192.232.216.135`
 
-* **HTTP Header Inspection (`curl`)**[cite: 8]
-  * **Command:** `curl -I https://networkwalks.com`[cite: 8]
-  * **Headers Captured:** `Server: Apache`, `x-nginx-cache: WordPress`[cite: 8]
-  * **Exposed Paths:** `/wp-json/` REST API endpoints[cite: 8]
+* **HTTP Header Inspection (`curl`)**
+  * **Command:** `curl -I https://networkwalks.com`
+  * **Headers Captured:** `Server: Apache`, `x-nginx-cache: WordPress`
+  * **Exposed Paths:** `/wp-json/` REST API endpoints
 
-* **Web Application Firewall Detection (`wafw00f`)**[cite: 7]
-  * **Command:** `wafw00f networkwalks.com`[cite: 7]
-  * **WAF Identified:** ModSecurity (SpiderLabs) WAF[cite: 7]
+* **Web Application Firewall Detection (`wafw00f`)**
+  * **Command:** `wafw00f networkwalks.com`
+  * **WAF Identified:** ModSecurity (SpiderLabs) WAF
 
-* **DNS Enumeration (`dnsrecon`)**[cite: 6]
-  * **Command:** `dnsrecon -d networkwalks.com`[cite: 6]
-  * **Result:** Executed domain-wide zone/record discovery routines[cite: 6].
+* **DNS Enumeration (`dnsrecon`)**
+  * **Command:** `dnsrecon -d networkwalks.com`
+  * **Result:** Executed domain-wide zone/record discovery routines
+
+### Reconnaissance Evidence
+<!-- Drag and drop your terminal screenshot here in GitHub editor -->
 
 ---
 
 ## Phase 2: Active Network Discovery & Topology Mapping
-* **Target Subnet:** `10.0.2.0/24`[cite: 4, 5]
-* **Platform:** Zenmap (Nmap 7.99 GUI on Kali Linux)[cite: 3, 4, 5]
+* **Target Subnet:** `10.0.2.0/24`
+* **Platform:** Zenmap (Nmap 7.99 GUI on Kali Linux)
 
 ### Subnet Scan Findings
-* **Scan Type:** Ping Scan (`nmap -sn 10.0.2.0/24`)[cite: 4, 5]
-* **Scan Duration:** 256 IP addresses scanned in 3.53 seconds[cite: 5]
-* **Live Hosts Discovered:** 2 Hosts Up[cite: 5]
+* **Scan Type:** Ping Scan (`nmap -sn 10.0.2.0/24`)
+* **Scan Duration:** 256 IP addresses scanned in 3.53 seconds
+* **Live Hosts Discovered:** 2 Hosts Up
 
 | Target IP | MAC Address | Interface / Hardware Profile | Latency / Status |
 | :--- | :--- | :--- | :--- |
-| **10.0.2.2** | `08:00:27:E7:BD:68`[cite: 5] | Oracle VirtualBox Virtual NIC[cite: 5] | Host is up (0.0017s latency)[cite: 5] |
-| **10.0.2.3** | *Local Host Interface* | Virtual Machine Adapter[cite: 3, 4, 5] | Host is up[cite: 5] |
+| **10.0.2.2** | `08:00:27:E7:BD:68` | Oracle VirtualBox Virtual NIC | Host is up (0.0017s latency) |
+| **10.0.2.3** | *Local Host Interface* | Virtual Machine Adapter | Host is up |
 
-### Visual Proof & Evidence
-
-#### 1. Passive Reconnaissance Terminal Execution
-![Reconnaissance Terminal Commands](https://github.com/advocals/Cybersecurity-Reconnaissance-Network-Discovery-Lab/blob/main/Screenshot%20(416).png)
-
-#### 2. Zenmap Subnet Scan Output
-![Zenmap Ping Scan Output](https://github.com/advocals/Cybersecurity-Reconnaissance-Network-Discovery-Lab/blob/main/Screenshot%20(422).png)
-
-#### 3. Network Topology Map
-![Zenmap Topology Map](https://github.com/advocals/Cybersecurity-Reconnaissance-Network-Discovery-Lab/blob/main/Screenshot%20(424).png)
+### Scan & Topology Evidence
+<!-- Drag and drop your Zenmap screenshots here in GitHub editor -->
 
 ---
 
 ## Defensive Recommendations
-1. **Suppress HTTP Headers:** Configure Apache/Nginx to hide explicit version numbers to limit automated footprinting[cite: 8, 11].
-2. **Restrict Subnet ICMP:** Apply host firewall rules across `10.0.2.0/24` to restrict ping sweeps and unauthorized discovery[cite: 4, 5].
+1. **Suppress HTTP Headers:** Configure Apache/Nginx to hide explicit version numbers to limit automated footprinting.
+2. **Restrict Subnet ICMP:** Apply host firewall rules across `10.0.2.0/24` to restrict ping sweeps and unauthorized discovery.
