@@ -52,6 +52,8 @@ This repository details the execution of two foundational cybersecurity operatio
 * **Scan Type:** Ping Scan (`nmap -sn 10.0.2.0/24`)
 * **Scan Duration:** 256 IP addresses scanned in 3.53 seconds
 * **Live Hosts Discovered:** 2 Hosts Up
+### Scan Result
+<https://github.com/advocals/Cybersecurity-Reconnaissance-Network-Discovery-Lab/blob/main/Screenshot%20(422).png>
 
 | Target IP | MAC Address | Interface / Hardware Profile | Latency / Status |
 | :--- | :--- | :--- | :--- |
