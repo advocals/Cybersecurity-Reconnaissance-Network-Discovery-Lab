@@ -40,7 +40,7 @@ This repository details the execution of two foundational cybersecurity operatio
   * **Result:** Executed domain-wide zone/record discovery routines
 
 ### Reconnaissance Evidence
-<!-- Drag and drop your terminal screenshot here in GitHub editor -->
+<https://github.com/advocals/Cybersecurity-Reconnaissance-Network-Discovery-Lab/blob/main/Screenshot%20(416).png>
 
 ---
 
