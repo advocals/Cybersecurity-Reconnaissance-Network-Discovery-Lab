@@ -61,7 +61,7 @@ This repository details the execution of two foundational cybersecurity operatio
 ![Reconnaissance Terminal Commands](https://github.com/advocals/Cybersecurity-Reconnaissance-Network-Discovery-Lab/blob/main/Screenshot%20(416).png)
 
 #### 2. Zenmap Subnet Scan Output
-![Zenmap Ping Scan Output](./screenshots/zenmap_scan.jpg)
+![Zenmap Ping Scan Output](https://github.com/advocals/Cybersecurity-Reconnaissance-Network-Discovery-Lab/blob/main/Screenshot%20(422).png)
 
 #### 3. Network Topology Map
 ![Zenmap Topology Map](./screenshots/zenmap_topology.jpg)
