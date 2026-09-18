@@ -59,7 +59,7 @@ This repository details the execution of two foundational cybersecurity operatio
 | **10.0.2.3** | *Local Host Interface* | Virtual Machine Adapter | Host is up |
 
 ### Scan & Topology Evidence
-<!-- Drag and drop your Zenmap screenshots here in GitHub editor -->
+<https://github.com/advocals/Cybersecurity-Reconnaissance-Network-Discovery-Lab/blob/main/Screenshot%20(424).png>
 
 ---
 
