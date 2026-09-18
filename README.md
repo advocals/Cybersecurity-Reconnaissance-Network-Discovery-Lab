@@ -64,7 +64,7 @@ This repository details the execution of two foundational cybersecurity operatio
 ![Zenmap Ping Scan Output](https://github.com/advocals/Cybersecurity-Reconnaissance-Network-Discovery-Lab/blob/main/Screenshot%20(422).png)
 
 #### 3. Network Topology Map
-![Zenmap Topology Map](./screenshots/zenmap_topology.jpg)
+![Zenmap Topology Map](https://github.com/advocals/Cybersecurity-Reconnaissance-Network-Discovery-Lab/blob/main/Screenshot%20(424).png)
 
 ---
 
